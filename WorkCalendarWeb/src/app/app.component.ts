@@ -8,7 +8,7 @@ import {HeroService} from './services/calendars.service';
 })
 export class AppComponent {
   title = 'app';
-  values: string[] = ["123"];
+  values: string[] = ["Wow!!!"];
 
   constructor(private heroService: HeroService) {
     this.heroService
