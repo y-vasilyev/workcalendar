@@ -1,0 +1,11 @@
+<table class="table">
+  <tbody>
+  <tr *ngFor="let month of months">
+    <th scope="row">1</th>
+    <td>{{month.name}}</td>
+    <td>{{month.days}}</td>
+    <td><a (click)="refresh()">refresh</a> </td>
+  </tr>
+
+  </tbody>
+</table>

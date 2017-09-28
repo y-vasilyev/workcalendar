@@ -3,18 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 
 namespace WorkCalendarApi.Controllers
 {
+
+    public class MonthData {
+        public int Id {get; set;}
+        public string Name {get; set;}
+        public int Days {get; set;}
+    }
+
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class MonthsController : Controller
     {
-        private static int cnt = 0;
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<MonthData> Get()
         {
-            return new string[] { "value11", "value" + (cnt++) };
+            for(var i = 1; i <=12; i++)
+            {
+                yield return new MonthData{ 
+                    Name = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i),
+                    Days = 30                
+                 };
+            }
         }
 
         // GET api/values/5
@@ -26,8 +39,9 @@ namespace WorkCalendarApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post(MonthData data)
         {
+
         }
 
         // PUT api/values/5

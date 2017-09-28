@@ -1,12 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
+{{text}}
+
+<app-months-table></app-months-table>
+
 <table class="table">
   <tbody>
   <tr *ngFor="let value of values">
     <th scope="row">1</th>
     <td>{{value}}</td>
-    <td>Otto</td>
-    <td>@mdo</td>
+    <td>{{values}}</td>
+    <td><a (click)="refresh()">refresh</a> </td>
   </tr>
 
   </tbody>
