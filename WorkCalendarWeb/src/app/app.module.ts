@@ -5,15 +5,18 @@ import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {HeroService} from "./services/calendars.service";
+import { MonthsTableComponent } from './months.table/months.table.component';
+import {MonthsServiceService} from "./months-service.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MonthsTableComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpModule
   ],
-  providers: [HeroService],
+  providers: [HeroService, MonthsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

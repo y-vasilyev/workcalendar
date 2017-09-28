@@ -9,8 +9,13 @@ import {HeroService} from './services/calendars.service';
 export class AppComponent {
   title = 'app';
   values: string[] = ["Wow!!!"];
+  text: string = "asdasd";
 
   constructor(private heroService: HeroService) {
+    this.refresh();
+  }
+
+  refresh(){
     this.heroService
       .getVaules()
       .then(values => {
