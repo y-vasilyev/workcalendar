@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Month} from '../shared/month'
-import {MonthsServiceService} from "../months-service.service";
+import {MonthsServiceService} from "../services/months-service.service";
 
 @Component({
   selector: 'app-months-table',

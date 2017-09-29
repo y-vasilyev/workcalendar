@@ -4,9 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {HeroService} from './services/calendars.service';
 import { MonthsTableComponent } from './months.table/months.table.component';
-import {MonthsServiceService} from './months-service.service';
+import {MonthsServiceService} from './services/months-service.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,7 @@ import {MonthsServiceService} from './months-service.service';
   imports: [
     BrowserModule, FormsModule, HttpModule
   ],
-  providers: [HeroService, MonthsServiceService],
+  providers: [MonthsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
