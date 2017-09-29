@@ -9,7 +9,7 @@ import {MonthsServiceService} from "../months-service.service";
 
 export class MonthsTableComponent implements OnInit {
 
-  months : Month[];
+  months: Month[];
 
   constructor(private monthsService: MonthsServiceService) { }
 
