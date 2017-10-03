@@ -5,9 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MonthsTableComponent } from './months.table/months.table.component';
-import {MonthsServiceService} from './services/months-service.service';
+import { MonthsServiceService } from './services/months-service.service';
 import { TodaydateComponent } from './todaydate/todaydate.component';
-import {TodaydateService} from './services/todaydate.service';
+import { TodaydateService } from './services/todaydate.service';
 
 
 @NgModule({
