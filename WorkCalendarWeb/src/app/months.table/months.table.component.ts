@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Month} from '../shared/month'
-import {MonthsServiceService} from "../services/months-service.service";
+import {Month} from '../shared/month';
+import {MonthsServiceService} from '../services/months-service.service';
 
 @Component({
   selector: 'app-months-table',
@@ -14,11 +14,11 @@ export class MonthsTableComponent implements OnInit {
   constructor(private monthsService: MonthsServiceService) { }
 
    ngOnInit() {
-      this.refresh()
+      this.refresh();
   }
 
 
-  refresh(){
+  refresh() {
     this.monthsService
       .getMonths()
       .then(values => {

@@ -1,5 +1,4 @@
-export  class Month
-{
+export  class Month {
   name: string;
   days: number;
 }
