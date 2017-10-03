@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MonthsTableComponent } from './months.table/months.table.component';
 import {MonthsServiceService} from './services/months-service.service';
 import { TodaydateComponent } from './todaydate/todaydate.component';
+import {TodaydateService} from './services/todaydate.service';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { TodaydateComponent } from './todaydate/todaydate.component';
   imports: [
     BrowserModule, FormsModule, HttpModule
   ],
-  providers: [MonthsServiceService],
+  providers: [MonthsServiceService, TodaydateService],
   bootstrap: [AppComponent],
   exports: [TodaydateComponent]
 })
