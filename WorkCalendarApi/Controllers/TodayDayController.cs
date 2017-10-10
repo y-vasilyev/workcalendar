@@ -7,7 +7,6 @@ using System.Globalization;
 
 namespace WorkCalendarApi.Controllers
 {
-
     public class TodayDate {
         public string Date {get; set;}
     }
@@ -21,9 +20,9 @@ namespace WorkCalendarApi.Controllers
         {
             for(var i = 1; i <=12; i++)
             {
-                yield return new MonthData{ 
+                yield return new MonthData{
                     Name = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i),
-                    Days = 30                
+                    Days = 30
                  };
             }
         }
