@@ -8,7 +8,7 @@ using System.Globalization;
 namespace WorkCalendarApi.Controllers
 {
     public class TodayDate {
-        public string Date {get; set;}
+        public DateTime Date {get; set;}
     }
 
     [Route("api/[controller]")]
@@ -16,15 +16,11 @@ namespace WorkCalendarApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<MonthData> Get()
+        public TodayDate Get()
         {
-            for(var i = 1; i <=12; i++)
-            {
-                yield return new MonthData{
-                    Name = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i),
-                    Days = 30
-                 };
-            }
+            var n = new TodayDate();
+            n.Date = DateTime.UtcNow;
+            return n;
         }
 
         // GET api/values/5

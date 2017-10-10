@@ -30,7 +30,7 @@ export class MonthsServiceService {
 
       })
       .catch(this.handleError);
-  }
+}
 
 
   private handleError(error: any): Promise<any> {

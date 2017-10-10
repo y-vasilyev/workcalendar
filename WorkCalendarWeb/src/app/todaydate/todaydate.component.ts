@@ -19,6 +19,10 @@ export class TodaydateComponent implements OnInit {
   }
 
   refresh() {
-    this.todayDate.date = this.todaydateService.getDate();
+    this.todaydateService
+      .getDate()
+      .then(values => {
+        console.log(values);
+        this.todayDate = values; });
   }
 }
