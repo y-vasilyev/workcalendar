@@ -19,7 +19,7 @@ namespace WorkCalendarApi.Controllers
         public TodayDate Get()
         {
             var n = new TodayDate();
-            n.Date = DateTime.UtcNow;
+            n.Date = DateTime.UtcNow.ToLocalTime();
             return n;
         }
 
